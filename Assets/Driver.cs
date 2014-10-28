@@ -17,5 +17,19 @@ public class Driver : MonoBehaviour {
 			stuck = transform.position.y;
 			driverPinManager.StickPin(this);
 		}
+
+		if(current) {
+			renderer.material.color = Color.red;
+		} else {
+			renderer.material.color = Color.white;
+		}
+	}
+
+	void OnCollisionEnter2D (Collision2D col) {
+		if(col.gameObject.GetComponent<Pin>() != null && stuck != -1f) {
+			// This is a collision with a pin when the driver was stuck - unstick driver
+			stuck = -1f;
+			driverPinManager.UnstickPin(this);
+		}
 	}
 }
