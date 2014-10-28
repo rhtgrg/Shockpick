@@ -46,7 +46,7 @@ public class DriverPinManager : MonoBehaviour {
 		if(availableDrivers.Count > 0) {
 			// Select a random pin to be current
 			currentPin = availableDrivers[Random.Range(0, availableDrivers.Count)];
-			currentPin.current = true;
+			currentPin.SetCurrentOnDrop();
 		} else {
 			Application.LoadLevel(0);
 		}

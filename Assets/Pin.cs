@@ -2,8 +2,8 @@
 using System.Collections;
 
 public class Pin : MonoBehaviour {
-	float maxY;
-	float posX;
+	public float maxY;
+	public float posX;
 	
 	void Start () {
 		posX = transform.position.x;

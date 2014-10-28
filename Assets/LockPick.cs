@@ -25,7 +25,7 @@ public class LockPick : MonoBehaviour {
 			float time = 0f;
 			float duration = Random.Range(1f,2f);
 			while(time <= duration) {
-				shakeOffset = new Vector2(Random.Range(5f,12f), Random.Range(5f,12f))/Constants.UNITS_PER_PIXEL;
+				shakeOffset = new Vector2(Random.Range(15f,30f), Random.Range(15f,30f))/Constants.UNITS_PER_PIXEL;
 				time += Time.deltaTime;
 				yield return null;
 			}

@@ -32,4 +32,18 @@ public class Driver : MonoBehaviour {
 			driverPinManager.UnstickPin(this);
 		}
 	}
+
+	public void SetCurrentOnDrop () {
+		// When the pin falls, it becomes current pin
+		StartCoroutine("DropSetsCurrent");
+	}
+
+	IEnumerator DropSetsCurrent () {
+		while(!current) {
+			if(transform.position.y <= GetComponent<Pin>().maxY) {
+				current = true;
+			}
+			yield return null;
+		}
+	}
 }
