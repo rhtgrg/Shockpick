@@ -22,6 +22,7 @@ public class DriverPinManager : MonoBehaviour {
 		}
 
 		pin.current = false;
+		currentPin = null;
 
 		availableDrivers.Remove(pin);
 		stuckDrivers.Add(pin);
@@ -34,11 +35,20 @@ public class DriverPinManager : MonoBehaviour {
 		stuckDrivers.Remove(pin);
 	}
 
+	void Update () {
+		// Prevent there being no current pin if possible
+		if(currentPin == null) {
+			SelectCurrentPin();
+		}
+	}
+
 	void SelectCurrentPin () {
 		if(availableDrivers.Count > 0) {
 			// Select a random pin to be current
 			currentPin = availableDrivers[Random.Range(0, availableDrivers.Count)];
 			currentPin.current = true;
+		} else {
+			Application.LoadLevel(0);
 		}
 	}
 }
