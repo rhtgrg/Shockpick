@@ -10,7 +10,7 @@ public class LockPick : MonoBehaviour {
 		// Move lockpick with the mouse
 		transform.position = mousePos;
 		// Rotate lockpick based on target direction
-		float rot_z = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg * 100;
-		transform.rotation = Quaternion.Euler(0f, 0f, rot_z + 90);
+		float rot_z = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg * Constants.UNITS_PER_PIXEL;
+		transform.rotation = Quaternion.Euler(0f, 0f, rot_z + 180);
 	}
 }
