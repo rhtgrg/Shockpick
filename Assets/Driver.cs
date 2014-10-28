@@ -2,8 +2,10 @@
 using System.Collections;
 
 public class Driver : MonoBehaviour {
-	float stuck = -1f;
+	public DriverPinManager driverPinManager;
 	public bool current = false;
+
+	float stuck = -1f;
 
 	void Update () {
 		if(stuck != -1f && transform.position.y < stuck) {
@@ -13,6 +15,7 @@ public class Driver : MonoBehaviour {
 		RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up, 0.01f, 1 << LayerMask.NameToLayer("Tumbler"));
 		if (hit && current) {
 			stuck = transform.position.y;
+			driverPinManager.StickPin(this);
 		}
 	}
 }
