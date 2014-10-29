@@ -1,14 +1,15 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Tutorial.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\App.cs">
     <Files>
-      <File FileName="Assets\LockPick.cs" Line="28" Column="49" />
+      <File FileName="Assets\App.cs" Line="6" Column="27" />
+      <File FileName="Assets\LockPick.cs" Line="1" Column="1" />
       <File FileName="Assets\CamSize.cs" Line="1" Column="1" />
       <File FileName="Assets\Constants.cs" Line="1" Column="1" />
       <File FileName="Assets\Pin.cs" Line="1" Column="1" />
       <File FileName="Assets\Driver.cs" Line="1" Column="1" />
-      <File FileName="Assets\DriverPinManager.cs" Line="41" Column="23" />
-      <File FileName="Assets\App.cs" Line="5" Column="14" />
+      <File FileName="Assets\DriverPinManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\App.cs" Line="13" Column="1" />
       <File FileName="Assets\Tutorial.cs" Line="16" Column="24" />
     </Files>
   </MonoDevelop.Ide.Workbench>
